@@ -36,6 +36,10 @@
 }
 
 .btn {
+    background: #072DA0 !important;
+}
+
+.btn:hover {
     background: #287EFF !important;
 }
 
