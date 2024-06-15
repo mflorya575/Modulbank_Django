@@ -2,3 +2,55 @@
     border: 2px solid #072DA0;
     max-width: 625px;
 }
+
+#blue_back {
+    background: #072DA0;
+}
+
+#blue {
+    color: #072DA0;
+}
+
+#blue_back:hover {
+    background: #287EFF;
+}
+
+#color-b {
+    color: #072DA0;
+}
+
+.hotline p {
+    color: #287EFF;
+}
+
+.text-brand {
+    color: #287EFF !important;
+}
+
+.footer-list li a:hover {
+    color: #287EFF !important;
+}
+
+.header-style-1 .hotline p {
+    color: #072DA0 !important;
+}
+
+.btn {
+    background: #287EFF !important;
+}
+
+.categories-dropdown-wrap ul li:hover {
+    border: 1px solid #287EFF !important;
+}
+
+.categories-dropdown-wrap ul li a:hover {
+    color: #287EFF !important;
+}
+
+.main-menu > nav > ul > li > a.active {
+    color: #072DA0 !important;
+}
+
+
+
+
