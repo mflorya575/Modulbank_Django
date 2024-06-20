@@ -17,3 +17,12 @@ def contact(request):
     }
 
     return render(request, 'bank/contact.html', context)
+
+
+def blog(request):
+
+    context = {
+        'title': 'Блог - Модульбанк',
+    }
+
+    return render(request, 'bank/blog.html', context)
