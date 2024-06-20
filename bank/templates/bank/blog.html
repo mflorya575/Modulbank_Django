@@ -10,8 +10,8 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3">
                             <h1 class="mb-15">Блог и Новости</h1>
-                            <div class="breadcrumb">
-                                <a href="index.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Главная</a>
+                            <div class="breadcrumb" id="blue">
+                                <a href="{% url 'main:index' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Главная</a>
                                 <span></span> Блог
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                         <div class="entry-content-2">
                                             <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="blog-category-grid.html">Событие</a></h6>
                                             <h4 class="post-title mb-15">
-                                                <a href="blog-post-right.html">{{ blog.title }}</a>
+                                                <a href="{% url 'main:blog_detail' slug=blog.slug %}">{{ blog.title }}</a>
                                             </h4>
                                             <div class="entry-meta font-xs color-grey mt-10 pb-10">
                                                 {% comment %} <div>

@@ -40,4 +40,4 @@ def blog_detail(request, slug):
         'blog': blog,
     }
 
-    return render(request, 'bank/blog.html', context)
+    return render(request, 'bank/blog_detail.html', context)
