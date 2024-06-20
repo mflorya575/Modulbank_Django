@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from .models import Blog
 
 
 def index(request):
@@ -20,9 +22,22 @@ def contact(request):
 
 
 def blog(request):
+    blogs = Blog.objects.all()
 
     context = {
         'title': 'Блог - Модульбанк',
+        'blogs': blogs,
+    }
+
+    return render(request, 'bank/blog.html', context)
+
+
+def blog_detail(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+
+    context = {
+        'title': blog.title,
+        'blog': blog,
     }
 
     return render(request, 'bank/blog.html', context)
