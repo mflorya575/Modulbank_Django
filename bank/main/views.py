@@ -58,8 +58,8 @@ def vacancies_list(request):
     vacancies = Category.objects.all()
 
     context = {
-        'title': 'Категории - Модульбанк',
-        'categories': categories,
+        'title': 'Вакансии - Модульбанк',
+        'vacancies': vacancies,
     }
 
-    return render(request, 'bank/categories.html', context)
+    return render(request, 'categories/category_vacancies.html', context)
