@@ -18,4 +18,7 @@ admin.site.register(Post)
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'author', 'create', 'status']
+    """
+    Админ-панель модели записей
+    """
+    prepopulated_fields = {'slug': ('title',)}

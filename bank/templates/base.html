@@ -1,4 +1,5 @@
 {% load static %}
+{% load mptt_tags %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -29,7 +30,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
+                        <a href="{% url 'main:index' %}"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-2">
@@ -166,6 +167,9 @@
                             </a>
                             <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
                                 <div class="d-flex categori-dropdown-inner">
+
+                                    
+
                                     <ul>
                                         <li>
                                             <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-1.svg" %}" alt="" /> {% endcomment %}Орел</a>
@@ -698,7 +702,7 @@
                     <div class="col">
                         <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0">
                             <div class="logo mb-30">
-                                <a href="index.html" class="mb-15"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
+                                <a href="{% url 'main:index' %}" class="mb-15"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                                 {% comment %} <p class="font-lg text-heading">Awesome grocery store website template</p> {% endcomment %}
                             </div>
                             <ul class="contact-infor">

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Blog
+from .models import Blog, Category
 
 
 def index(request):
@@ -41,3 +41,25 @@ def blog_detail(request, slug):
     }
 
     return render(request, 'bank/blog_detail.html', context)
+
+
+def categories_list(request):
+    categories = Category.objects.all()
+
+    context = {
+        'title': 'Категории - Модульбанк',
+        'categories': categories,
+    }
+
+    return render(request, 'bank/categories.html', context)
+
+
+def vacancies_list(request):
+    vacancies = Category.objects.all()
+
+    context = {
+        'title': 'Категории - Модульбанк',
+        'categories': categories,
+    }
+
+    return render(request, 'bank/categories.html', context)

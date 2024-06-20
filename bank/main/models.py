@@ -151,3 +151,13 @@ class Blog(models.Model):
 #         if self.content_type == 'image':
 #             return f'Изображение для {self.blog.title}'
 #         return f'Текст для {self.blog.title}'
+
+
+class Vacancy(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    category = models.ForeignKey(Category, related_name='vacancies', on_delete=models.CASCADE)
+    published_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
