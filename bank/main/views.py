@@ -12,6 +12,15 @@ def index(request):
     return render(request, 'bank/index.html', context)
 
 
+def about(request):
+
+    context = {
+        'title': 'О нас - Модульбанк',
+    }
+
+    return render(request, 'bank/about.html', context)
+
+
 def contact(request):
 
     context = {
