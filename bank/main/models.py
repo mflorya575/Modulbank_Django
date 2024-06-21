@@ -156,8 +156,19 @@ class Blog(models.Model):
 class Vacancy(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    thumbnail = models.ImageField(default='default.jpg',
+                                  verbose_name='Изображение вакансии',
+                                  blank=True,
+                                  upload_to='images/thumbnails/',
+                                  validators=[
+                                      FileExtensionValidator(allowed_extensions=('png', 'jpg', 'webp', 'jpeg', 'gif'))]
+                                  )
     category = models.ForeignKey(Category, related_name='vacancies', on_delete=models.CASCADE)
     published_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Вакансия'
+        verbose_name_plural = 'Вакансии'
 
     def __str__(self):
         return self.title

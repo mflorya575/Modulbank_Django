@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Blog, Category
+from .models import Blog, Category, Vacancy
 
 
 def index(request):
@@ -55,7 +55,7 @@ def categories_list(request):
 
 
 def vacancies_list(request):
-    vacancies = Category.objects.all()
+    vacancies = Vacancy.objects.all()
 
     context = {
         'title': 'Вакансии - Модульбанк',
