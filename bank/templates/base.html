@@ -171,38 +171,17 @@
                                     
 
                                     <ul>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-1.svg" %}" alt="" /> {% endcomment %}Орел</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-2.svg" %}" alt="" /> {% endcomment %}Астрахань</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-3.svg" %}" alt="" /> {% endcomment %}Владивосток</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-4.svg" %}" alt="" /> {% endcomment %}Москва</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-5.svg" %}" alt="" /> {% endcomment %}Санкт-Петербург</a>
-                                        </li>
+                                        {% for category in categories %}
+                                            <li>
+                                                <a href="shop-grid-right.html">{{ category.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                        
                                     </ul>
                                     <ul class="end">
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-6.svg" %}" alt="" /> {% endcomment %}Владимир</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-7.svg" %}" alt="" /> {% endcomment %}Казань</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-8.svg" %}" alt="" /> {% endcomment %}Екатеринбург</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-9.svg" %}" alt="" /> {% endcomment %}Рязань</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> {% comment %} <img src="{% static "assets/imgs/theme/icons/category-10.svg" %}" alt="" /> {% endcomment %}Нижний Новгород</a>
-                                        </li>
+                                        {% comment %} <li>
+                                            <a href="shop-grid-right.html">Нижний Новгород</a>
+                                        </li> {% endcomment %}
                                     </ul>
                                 </div>
                                 {% comment %} <div class="more_slide_open" style="display: none">

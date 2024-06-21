@@ -8872,7 +8872,7 @@ span.fi-rs-apps {
   border: 1px solid #BCE3C9;
   border-radius: 10px;
   font-size: 16px;
-  min-width: 270px;
+  max-width: 300px;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0;
