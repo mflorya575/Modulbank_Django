@@ -155,6 +155,7 @@ class Blog(models.Model):
 
 class Vacancy(models.Model):
     title = models.CharField(max_length=255)
+    slug = models.SlugField(verbose_name='URL', max_length=255, blank=True)
     content = models.TextField()
     thumbnail = models.ImageField(default='default.jpg',
                                   verbose_name='Изображение вакансии',

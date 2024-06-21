@@ -11,4 +11,5 @@ urlpatterns = [
     path('blog/<slug:slug>/', views.blog_detail, name='blog_detail'),
 
     path('vacancies/', views.vacancies_list, name='vacancies_list'),
+    path('vacancy/<slug:slug>/', views.vacancy_detail, name='vacancy_detail'),
 ]

@@ -24,4 +24,9 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-admin.site.register(Vacancy)
+@admin.register(Vacancy)
+class VacancyAdmin(admin.ModelAdmin):
+    """
+    Админ-панель модели записей
+    """
+    prepopulated_fields = {'slug': ('title',)}

@@ -63,3 +63,14 @@ def vacancies_list(request):
     }
 
     return render(request, 'categories/category_vacancies.html', context)
+
+
+def vacancy_detail(request, slug):
+    vacancy = get_object_or_404(Vacancy, slug=slug)
+
+    context = {
+        'title': vacancy.title,
+        'vacancy': vacancy,
+    }
+
+    return render(request, 'categories/vacancy_detail.html', context)

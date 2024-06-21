@@ -103,14 +103,14 @@
                                     <div class="product-category">
                                         <a href="shop-grid-right.html">Вакансия</a>
                                     </div>
-                                    <h2><a href="shop-product-right.html">{{ vacancy.title }}</a></h2>
+                                    <h2><a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">{{ vacancy.title }}</a></h2>
                                     <div>
-                                        <span class="font-small text-muted">В город <a href="vendor-details-1.html">{{ vacancy.category }}</a></span>
+                                        <span class="font-small text-muted">В город <a href="{% url 'main:index' %}">{{ vacancy.category }}</a></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    {% endfor %}{% comment %} vendor-details-1.html {% endcomment %}
 
 
 
