@@ -4,9 +4,11 @@ from .models import Blog, Category, Vacancy
 
 
 def index(request):
+    vacancies = Vacancy.objects.all()
 
     context = {
         'title': 'Главная - Модульбанк',
+        'vacancies': vacancies,
     }
 
     return render(request, 'bank/index.html', context)
