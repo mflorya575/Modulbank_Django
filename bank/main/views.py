@@ -85,3 +85,12 @@ def vacancy_detail(request, slug):
     }
 
     return render(request, 'categories/vacancy_detail.html', context)
+
+
+def partner_program(request):
+
+    context = {
+        'title': 'Партнерская программа - Модульбанк',
+    }
+
+    return render(request, 'bank/partner_program.html', context)
