@@ -94,3 +94,12 @@ def partner_program(request):
     }
 
     return render(request, 'bank/partner_program.html', context)
+
+
+def open_score(request):
+
+    context = {
+        'title': 'Открыть счет - Модульбанк',
+    }
+
+    return render(request, 'bank/open_score.html', context)
