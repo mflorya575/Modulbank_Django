@@ -14,7 +14,9 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/theme/favicon.svg' %}" />
+    {% comment %} <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/theme/favicon.svg' %}" /> {% endcomment %}
+    <link rel="shortcut icon" href="{% static 'assets/imgs/theme/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/imgs/theme/favicon.ico' %}" type="image/x-icon">
     <!-- Template CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
     <!-- Custom CSS -->
