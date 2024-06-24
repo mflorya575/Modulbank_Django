@@ -96,6 +96,7 @@ class Blog(models.Model):
 
     title = models.CharField(verbose_name='Название записи', max_length=255)
     slug = models.SlugField(verbose_name='URL', max_length=255, blank=True)
+    category = models.ForeignKey(Category, related_name='blogs', blank=True, null=True, on_delete=models.CASCADE)
     description = models.TextField(verbose_name='Краткое описание', max_length=500)
     text = models.TextField(verbose_name='Полный текст записи')
     thumbnail = models.ImageField(default='default.jpg',

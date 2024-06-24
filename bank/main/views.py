@@ -54,15 +54,27 @@ def blog_detail(request, slug):
     return render(request, 'bank/blog_detail.html', context)
 
 
-def categories_list(request):
-    categories = Category.objects.all()
+# def categories_list(request):
+#     categories = Category.objects.all()
+#
+#     context = {
+#         'title': 'Категории - Модульбанк',
+#         'categories': categories,
+#     }
+#
+#     return render(request, 'bank/categories.html', context)
 
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    blogs = Blog.objects.filter(category=category)
     context = {
-        'title': 'Категории - Модульбанк',
-        'categories': categories,
+        'title': category.title,
+        'category': category,
+        'blogs': blogs,
     }
 
-    return render(request, 'bank/categories.html', context)
+    return render(request, 'bank/category_detail.html', context)
 
 
 def vacancies_list(request):
