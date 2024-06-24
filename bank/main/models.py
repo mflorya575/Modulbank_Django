@@ -118,8 +118,8 @@ class Blog(models.Model):
         db_table = 'posts_blog'
         ordering = ['-fixed', '-create']
         indexes = [models.Index(fields=['-fixed', '-create', 'status'])]
-        verbose_name = 'СтатьяБлог'
-        verbose_name_plural = 'СтатьиБлога'
+        verbose_name = 'Статья Блога'
+        verbose_name_plural = 'Статьи Блога'
 
     def __str__(self):
         return self.title
