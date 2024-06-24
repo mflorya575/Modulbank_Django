@@ -66,14 +66,13 @@ def blog_detail(request, slug):
 
 
 def category_detail(request, slug):
-    vacancies = Vacancy.objects.all()
     category = get_object_or_404(Category, slug=slug)
-    blogs = Blog.objects.filter(category=category)
+    vacancies = Vacancy.objects.filter(category=category)
+
     context = {
         'title': category.title,
         'vacancies': vacancies,
         'category': category,
-        'blogs': blogs,
     }
 
     return render(request, 'bank/category_detail.html', context)
