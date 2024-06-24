@@ -9,10 +9,10 @@
                 <div class="archive-header">
                     <div class="row align-items-center">
                         <div class="col-xl-3">
-                            <h1 class="mb-15">Блог и Новости</h1>
+                            <h1 class="mb-15">{{ category }}</h1>
                             <div class="breadcrumb" id="blue">
                                 <a href="{% url 'main:index' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Главная</a>
-                                <span></span> Блог
+                                <span></span> {{ category }}
                             </div>
                         </div>
                         <div class="col-xl-9 text-end d-none d-xl-block">
@@ -91,27 +91,28 @@
                         </div>
                         <div class="loop-grid pr-30">
                             <div class="row">
-                                {% for blog in blogs %}
-                                    <article class="col-xl-4 col-lg-6 col-md-6 text-center hover-up mb-30 animated">
-                                        <div class="post-thumb">
-                                            <a href="blog-post-right.html">
-                                                <img class="border-radius-15" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}" style="width: 368px; height: 302px;"/>
-                                            </a>
-                                        </div>
-                                        <div class="entry-content-2">
-                                            <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="blog-category-grid.html">Событие</a></h6>
-                                            <h4 class="post-title mb-15">
-                                                <a href="{% url 'main:blog_detail' slug=blog.slug %}">{{ blog.title }}</a>
-                                            </h4>
-                                            <div class="entry-meta font-xs color-grey mt-10 pb-10">
-                                                {% comment %} <div>
-                                                    <span class="post-on mr-10">25 April 2022</span>
-                                                    <span class="hit-count has-dot mr-10">126k Views</span>
-                                                    <span class="hit-count has-dot">4 mins read</span>
-                                                </div> {% endcomment %}
+                                {% for vacancy in vacancies %}
+                                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                        <div class="product-cart-wrap mb-30">
+                                            <div class="product-img-action-wrap">
+                                                <div class="product-img product-img-zoom">
+                                                    <a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">
+                                                        <img class="default-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 157px;"/>
+                                                        <img class="hover-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 157px;"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content-wrap">
+                                                <div class="product-category">
+                                                    <a href="shop-grid-right.html">Вакансия</a>
+                                                </div>
+                                                <h2><a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">{{ vacancy.title }}</a></h2>
+                                                <div>
+                                                    <span class="font-small text-muted">В город <a href="{% url 'main:index' %}">{{ vacancy.category }}</a></span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </article>
+                                    </div>
                                 {% endfor %}
 
                                 
