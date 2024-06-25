@@ -63,5 +63,9 @@ a {
     height: 500px !important;
 }
 
+.logo.logo-width-1 {
+    margin-right: -200px !important;
+}
+
 
 
