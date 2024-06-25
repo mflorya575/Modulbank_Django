@@ -307,9 +307,9 @@
                                             <li><a href="page-404.html">404 Page</a></li>
                                         </ul>
                                     </li> {% endcomment %}
-                                    <li>
+                                    {% comment %} <li>
                                         <a href="{% url 'main:contact' %}">Контакты</a>
-                                    </li>
+                                    </li> {% endcomment %}
                                     <li>
                                         <a href="{% url 'main:vacancies_list' %}">Вакансии</a>
                                     </li>
@@ -395,7 +395,7 @@
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
                 <div class="mobile-header-logo">
-                    <a href="index.html"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
+                    <a href="{% url 'main:index' %}"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                 </div>
                 <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                     <button class="close-style search-close">
@@ -424,9 +424,9 @@
                             <li class="menu-item-has-children">
                                 <a href="{% url 'main:blog' %}">Блог</a>
                             </li>
-                            <li class="menu-item-has-children">
+                            {% comment %} <li class="menu-item-has-children">
                                 <a href="{% url 'main:contact' %}">Контакты</a>
-                            </li>
+                            </li> {% endcomment %}
                             <li class="menu-item-has-children">
                                 <a href="{% url 'main:vacancies_list' %}">Вакансии</a>
                             </li>
@@ -480,8 +480,7 @@
                         <div class="position-relative newsletter-inner">
                             <div class="newsletter-content">
                                 <h2 class="mb-20">
-                                    Оставайтесь дома и покупайте все <br />
-                                    необходимое в Модульбанке
+                                    Подписаться на новости и акции
                                 </h2>
                                 {% comment %} <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">Nest Mart</span></p> {% endcomment %}
                                 <form class="form-subcriber d-flex">
@@ -655,7 +654,7 @@
                     <div class="footer-bottom"></div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <p class="font-sm mb-0">&copy; 2024, <strong class="text-brand">Модульбанк</strong> - компания <br />Все права защищены</p>
+                    <p class="font-sm mb-0"><strong class="text-brand">ФК Модуль</strong> &copy; 2024. Все права защищены</p>
                 </div>
                 <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
                     <div class="hotline d-lg-inline-flex mr-30">
