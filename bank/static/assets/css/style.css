@@ -59,5 +59,9 @@ a {
     color: #072DA0;
 }
 
+.leaflet-map {
+    height: 500px !important;
+}
+
 
 
