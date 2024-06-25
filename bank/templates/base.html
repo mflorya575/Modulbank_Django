@@ -274,9 +274,9 @@
                                         </ul>
                                     </li> {% endcomment %}
                                     {% comment %}  {% endcomment %}
-                                    <li>
-                                        <a href="{% url 'main:blog' %}">Блог {% comment %} <i class="fi-rs-angle-down"></i> {% endcomment %}</a>
-                                        {% comment %} <ul class="sub-menu">
+                                    {% comment %} <li>
+                                        <a href="{% url 'main:blog' %}">Блог</a>
+                                        <ul class="sub-menu">
                                             <li><a href="blog-category-grid.html">Blog Category Grid</a></li>
                                             <li><a href="blog-category-list.html">Blog Category List</a></li>
                                             <li><a href="blog-category-big.html">Blog Category Big</a></li>
@@ -289,8 +289,8 @@
                                                     <li><a href="blog-post-fullwidth.html">No Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                        </ul> {% endcomment %}
-                                    </li>
+                                        </ul>
+                                    </li> {% endcomment %}
                                     {% comment %} <li>
                                         <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
@@ -314,7 +314,7 @@
                                         <a href="{% url 'main:vacancies_list' %}">Вакансии</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'main:partner_program' %}">Партнерская программа</a>
+                                        <a href="{% url 'main:partner_program' %}">Стать партнером</a>
                                     </li>
                                     <li>
                                         <a href="{% url 'main:open_score' %}">Открыть счет</a>
