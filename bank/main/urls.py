@@ -19,4 +19,5 @@ urlpatterns = [
 
     path('partner-program/', views.partner_program, name='partner_program'),
     path('open-score/', views.open_score, name='open_score'),
+    path('bank-garant/', views.bank_garant, name='bank_garant'),
 ]

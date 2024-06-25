@@ -118,3 +118,12 @@ def open_score(request):
     }
 
     return render(request, 'bank/open_score.html', context)
+
+
+def bank_garant(request):
+
+    context = {
+        'title': 'Банковские гарантии - Модульбанк',
+    }
+
+    return render(request, 'bank/bank_garant.html', context)
