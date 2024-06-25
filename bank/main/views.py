@@ -127,3 +127,12 @@ def bank_garant(request):
     }
 
     return render(request, 'bank/bank_garant.html', context)
+
+
+def credit(request):
+
+    context = {
+        'title': 'Кредиты - Модульбанк',
+    }
+
+    return render(request, 'bank/credit.html', context)
