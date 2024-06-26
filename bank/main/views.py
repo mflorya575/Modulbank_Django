@@ -1,16 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Blog, Category, Vacancy
+from .models import Blog, Category, Vacancy, BannerIndex
 
 
 def index(request):
     vacancies = Vacancy.objects.all()
     blogs = Blog.objects.all()
+    banners = BannerIndex.objects.all()
 
     context = {
         'title': 'Главная - Модульбанк',
         'vacancies': vacancies,
         'blogs': blogs,
+        'banners': banners,
     }
 
     return render(request, 'bank/index.html', context)

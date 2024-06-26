@@ -174,3 +174,19 @@ class Vacancy(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class BannerIndex(models.Model):
+    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
+    image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
+    is_active = models.BooleanField(default=True, verbose_name="Активен")
+
+    class Meta:
+        verbose_name = "Баннер_Главная"
+        verbose_name_plural = "Баннеры_Главная"
+        ordering = ['-published_at']
+
+    def __str__(self):
+        return self.title

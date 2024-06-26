@@ -8,32 +8,33 @@
         <div class="container">
             <div class="home-slide-cover mt-30">
                 <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/b1.jpg' %})">
-                        <div class="slider-content">
-                            <h1 class="display-2 mb-40">
-                                Добро пожаловать<br />
-                                в Модульбанк
-                            </h1>
-                            {% comment %} <p class="mb-65">Sign up for the daily newsletter</p>
-                            <form class="form-subcriber d-flex">
-                                <input type="email" placeholder="Your emaill address" />
-                                <button class="btn" type="submit">Subscribe</button>
-                            </form> {% endcomment %}
+
+
+                    {% for banner in banners %}
+                        <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ banner.image.url }})">
+                            <div class="slider-content">
+                                <h1 class="display-2 mb-40">
+                                    {{ banner.title }}
+                                </h1>
+                                {% comment %} <p class="mb-65">Sign up for the daily newsletter</p>
+                                <form class="form-subcriber d-flex">
+                                    <input type="email" placeholder="Your emaill address" />
+                                    <button class="btn" type="submit">Subscribe</button>
+                                </form> {% endcomment %}
+                            </div>
                         </div>
-                    </div>
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/b2.jpg' %})">
+                    {% endfor %}
+
+
+                    {% comment %} <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/b2.jpg' %})">
                         <div class="slider-content">
                             <h1 class="display-2 mb-40">
                                 Лучшие вакансии<br />
                                 и услуги
                             </h1>
-                            {% comment %} <p class="mb-65">Save up to 50% off on your first order</p>
-                            <form class="form-subcriber d-flex">
-                                <input type="email" placeholder="Your emaill address" />
-                                <button class="btn" type="submit">Subscribe</button>
-                            </form> {% endcomment %}
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+
                 </div>
                 <div class="slider-arrow hero-slider-1-arrow"></div>
             </div>
