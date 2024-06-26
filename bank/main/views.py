@@ -127,9 +127,11 @@ def open_score(request):
 
 
 def bank_garant(request):
+    banners = BannerBank.objects.all()
 
     context = {
         'title': 'Банковские гарантии - Модульбанк',
+        'banners': banners,
     }
 
     return render(request, 'bank/bank_garant.html', context)

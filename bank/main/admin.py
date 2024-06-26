@@ -62,3 +62,11 @@ class BannerCreditAdmin(admin.ModelAdmin):
     Админ-панель модели баннеров
     """
     prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(BannerBank)
+class BannerBankAdmin(admin.ModelAdmin):
+    """
+    Админ-панель модели баннеров
+    """
+    prepopulated_fields = {'slug': ('title',)}
