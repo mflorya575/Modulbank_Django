@@ -8,31 +8,31 @@
         <div class="container">
             <div class="home-slide-cover mt-30">
                 <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/slider-1.png' %})">
+
+
+                    {% for b in bannersopen %}
+                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ b.image.url }})">
                         <div class="slider-content">
                             <h1 class="display-2 mb-40">
-                                Открыть расчетный счет
+                                {{ b.title }}
                             </h1>
-                            <p class="mb-65">Делать бизнес проще — наше дело</p>
-                            {% comment %} <form class="form-subcriber d-flex">
-                                <input type="email" placeholder="Your emaill address" />
-                                <button class="btn" type="submit">Subscribe</button>
-                            </form> {% endcomment %}
+                            {% comment %} <p class="mb-65">Делать бизнес проще — наше дело</p> {% endcomment %}
                         </div>
                     </div>
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/slider-2.png' %})">
+                    {% endfor %}
+
+
+
+                    {% comment %} <div class="single-hero-slider single-animation-wrap" style="background-image: url({% static 'assets/imgs/slider/slider-2.png' %})">
                         <div class="slider-content">
                             <h1 class="display-2 mb-40">
                                 Банковские сервисы для<br />
                                 любого бизнеса
                             </h1>
                             <p class="mb-65">Наши продукты — наше преимущество</p>
-                            {% comment %} <form class="form-subcriber d-flex">
-                                <input type="email" placeholder="Your emaill address" />
-                                <button class="btn" type="submit">Subscribe</button>
-                            </form> {% endcomment %}
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+
                 </div>
                 <div class="slider-arrow hero-slider-1-arrow"></div>
             </div>

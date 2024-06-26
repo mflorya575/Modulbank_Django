@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Blog, Category, Vacancy, BannerIndex
+from .models import Blog, Category, Vacancy, BannerIndex, BannerOpen
 
 
 def index(request):
@@ -114,9 +114,11 @@ def partner_program(request):
 
 
 def open_score(request):
+    bannersopen = BannerOpen.objects.all()
 
     context = {
         'title': 'Открыть счет - Модульбанк',
+        'bannersopen': bannersopen,
     }
 
     return render(request, 'bank/open_score.html', context)
