@@ -136,9 +136,11 @@ def bank_garant(request):
 
 
 def credit(request):
+    banners = BannerCredit.objects.all()
 
     context = {
         'title': 'Кредиты - Модульбанк',
+        'banners': banners,
     }
 
     return render(request, 'bank/credit.html', context)
