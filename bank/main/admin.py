@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from mptt.admin import DraggableMPTTAdmin
 from django_mptt_admin.admin import DjangoMpttAdmin
-from .models import Category, Blog, Vacancy, BannerIndex, BannerOpen
+from .models import Category, Blog, Vacancy, BannerIndex, BannerOpen, BannerCredit, BannerBank, BannerPartner
 
 
 @admin.register(Category)
@@ -42,6 +42,14 @@ class BannerIndexAdmin(admin.ModelAdmin):
 
 @admin.register(BannerOpen)
 class BannerOpenAdmin(admin.ModelAdmin):
+    """
+    Админ-панель модели баннеров
+    """
+    prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(BannerPartner)
+class BannerPartnerAdmin(admin.ModelAdmin):
     """
     Админ-панель модели баннеров
     """
