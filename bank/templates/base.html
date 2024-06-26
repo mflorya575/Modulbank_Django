@@ -40,6 +40,9 @@
         </div> {% endcomment %}
         <div class="header-bottom header-bottom-bg-color sticky-bar">
             <div class="container">
+                {% comment %} <div class="logo logo-width-1">
+                    <a href="{% url 'main:index' %}"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
+                </div> {% endcomment %}
                 <div class="header-wrap header-space-between position-relative">
                     <div class="logo logo-width-1 d-block d-lg-none">
                         <a href="index.html"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
@@ -281,6 +284,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                    <nav>
+                        <li>
+                            <a href="{% url 'main:bank_garant' %}">Наши города <i class="fi-rs-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'main:bank_garant' %}">Орел</a></li>
+                                <li><a href="{% url 'main:credit' %}">Астрахань</a></li>
+                            </ul>
+                        </li>
+                    </nav>
+                </div>
+
             </div>
         </div>
     </header>

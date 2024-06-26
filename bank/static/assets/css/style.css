@@ -64,7 +64,11 @@ a {
 }
 
 .logo.logo-width-1 {
-    margin-right: -200px !important;
+    margin-right: -50px !important;
+}
+
+.custom-city {
+    width: 190px;
 }
 
 
