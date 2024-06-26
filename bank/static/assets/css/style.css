@@ -68,7 +68,17 @@ a {
 }
 
 .custom-city {
-    width: 190px;
+    width: 170px;
+    margin-top: -20px;
+}
+
+#custom-btn {
+    background: none !important;
+    color: #253D4E !important;
+}
+
+footer .hotline {
+    min-width: 260px !important;
 }
 
 
