@@ -81,5 +81,23 @@ footer .hotline {
     min-width: 260px !important;
 }
 
+footer {
+    background: rgb(175, 175, 252);
+}
+
+@media (max-width: 768px) {
+    .d-none {
+        display: block !important;
+    }
+
+    .text-end {
+        text-align: start !important;
+    }
+
+    footer .mobile-social-icon {
+        justify-content: start;
+    }
+}
+
 
 

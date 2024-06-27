@@ -203,7 +203,7 @@
                                         <a href="{% url 'main:vacancies_list' %}">Вакансии</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'main:bank_garant' %}">Услуги <i class="fi-rs-angle-down"></i></a>
+                                        <a href="{% url 'main:bank_garant' %}">Получить <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="{% url 'main:bank_garant' %}">Банковские гарантии</a></li>
                                             <li><a href="{% url 'main:credit' %}">Кредиты</a></li>
@@ -212,9 +212,9 @@
                                     <li>
                                         <a href="{% url 'main:partner_program' %}">Стать партнером</a>
                                     </li>
-                                    <li>
+                                    {% comment %} <li>
                                         <a href="{% url 'main:open_score' %}">Открыть счет</a>
-                                    </li>
+                                    </li> {% endcomment %}
                                 </ul>
                             </nav>
                         </div>
@@ -404,7 +404,7 @@
                     <a href="#"><img src="{% static "assets/imgs/theme/icons/icon-pinterest-white.svg" %}" alt="" /></a>
                     <a href="#"><img src="{% static "assets/imgs/theme/icons/icon-youtube-white.svg" %}" alt="" /></a>
                 </div> {% endcomment %}
-                <div class="site-copyright">Модульбанк 2024 ©. Все права защищены.</div>
+                <div class="site-copyright">ФК Модуль 2024 ©. Все права защищены.</div>
             </div>
         </div>
     </div>
@@ -439,7 +439,7 @@
                 </div>
             </div>
         </section>
-        <section class="featured section-padding">
+        {% comment %} <section class="featured section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0">
@@ -449,7 +449,6 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Лучшие цены</h3>
-                                {% comment %} <p>Orders $50 or more</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -460,7 +459,6 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Бесплатная доставка</h3>
-                                {% comment %} <p>24/7 amazing services</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -471,7 +469,6 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Отличная сделка</h3>
-                                {% comment %} <p>When you sign up</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -482,7 +479,6 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Широкий ассортимент</h3>
-                                {% comment %} <p>Mega Discounts</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -493,7 +489,6 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Легкий возврат</h3>
-                                {% comment %} <p>Within 30 days</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -504,13 +499,12 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Безопасная доставка</h3>
-                                {% comment %} <p>Within 30 days</p> {% endcomment %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <section class="section-padding footer-mid">
             <div class="container pt-15 pb-20">
                 <div class="row">
@@ -545,7 +539,7 @@
                         </ul>
                     </div>
                     <div class="footer-link-widget col">
-                        <h4 class="widget-title">Услуги</h4>
+                        <h4 class="widget-title">Получить</h4>
                         <ul class="footer-list mb-sm-5 mb-md-0">
                             {% comment %} <li><a href="#">Войти</a></li> {% endcomment %}
                             {% comment %} <li><a href="#">View Cart</a></li> {% endcomment %}
