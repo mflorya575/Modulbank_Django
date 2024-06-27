@@ -22,6 +22,11 @@ class Category(MPTTModel):
         verbose_name='Родительская категория'
     )
 
+    map_html = models.TextField(verbose_name='Яндекс Карта', blank=True, null=True)  # HTML-код карты
+    phone = models.CharField(max_length=20, verbose_name='Телефон', blank=True, null=True)
+    address = models.CharField(max_length=255, verbose_name='Адрес', blank=True, null=True)
+    email = models.EmailField(verbose_name='Email', blank=True, null=True)
+
     class MPTTMeta:
         """
         Сортировка по вложенности
@@ -32,8 +37,8 @@ class Category(MPTTModel):
         """
         Сортировка, название модели в админ панели, таблица с данными
         """
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Город'
+        verbose_name_plural = 'Города'
         db_table = 'app_categories'
 
     def __str__(self):

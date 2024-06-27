@@ -16,6 +16,7 @@ urlpatterns = [
 
     path('vacancies/', views.vacancies_list, name='vacancies_list'),
     path('vacancy/<slug:slug>/', views.vacancy_detail, name='vacancy_detail'),
+    path('city/<slug:city_slug>/', views.city_detail, name='city_detail'),
 
     path('partner-program/', views.partner_program, name='partner_program'),
     path('open-score/', views.open_score, name='open_score'),

@@ -62,9 +62,9 @@
                                     
 
                                     <ul>
-                                        {% for category in categories %}
+                                        {% for c in categories %}
                                             <li>
-                                                <a href="{% url 'main:category_detail' category.slug %}">{{ category.title }}</a>
+                                                <a href="{% url 'main:city_detail' c.slug %}">{{ c.title }}</a>
                                             </li>
                                         {% endfor %}
                                         

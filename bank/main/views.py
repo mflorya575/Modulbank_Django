@@ -36,6 +36,18 @@ def contact(request):
     return render(request, 'bank/contact.html', context)
 
 
+def city_detail(request, city_slug):
+    # Получаем объект категории по слагу города
+    city = get_object_or_404(Category, slug=city_slug)
+
+    context = {
+        'title': f'Открыть счет - {city.title}',
+        'city': city,
+    }
+
+    return render(request, 'categories/city_detail.html', context)
+
+
 def blog(request):
     blogs = Blog.objects.all()
 
