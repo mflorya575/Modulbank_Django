@@ -6,7 +6,7 @@ from .models import Blog, Category, Vacancy, BannerIndex, BannerOpen, BannerCred
 def set_city(request, city_id):
     city = get_object_or_404(Category, id=city_id)
     request.session['city_id'] = city.id
-    return redirect('main:vacancies_list')
+    return redirect('main:index')
 
 
 def get_current_city(request):
