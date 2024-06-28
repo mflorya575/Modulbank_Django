@@ -17,8 +17,14 @@ def get_current_city(request):
 
 
 def index(request):
-    vacancies = Vacancy.objects.all()
-    blogs = Blog.objects.all()
+    city = get_current_city(request)
+    if city:
+        vacancies = Vacancy.objects.filter(category=city)
+        blogs = Blog.objects.filter(category=city)
+    else:
+        vacancies = Vacancy.objects.all()
+        blogs = Blog.objects.all()
+
     banners = BannerIndex.objects.all()
 
     context = {
@@ -26,6 +32,7 @@ def index(request):
         'vacancies': vacancies,
         'blogs': blogs,
         'banners': banners,
+        'city': city,
     }
 
     return render(request, 'bank/index.html', context)
