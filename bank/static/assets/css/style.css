@@ -20,19 +20,19 @@
 }
 
 .hotline p {
-    color: #287EFF;
+    color: #0F1A7C;
 }
 
 .text-brand {
-    color: #287EFF !important;
+    color: #083a86 !important;
 }
 
 .footer-list li a:hover {
-    color: #287EFF !important;
+    color: #b5d2ff !important;
 }
 
 .header-style-1 .hotline p {
-    color: #072DA0 !important;
+    color: #0F1A7C !important;
 }
 
 .btn {
@@ -81,8 +81,16 @@ footer .hotline {
     min-width: 260px !important;
 }
 
-footer {
-    background: rgb(175, 175, 252);
+/* footer {
+    background:  #287EFF;
+} */
+
+.footer-mid {
+    background:  #287EFF;
+}
+
+.custom-back {
+    background:  #287EFF;
 }
 
 @media (max-width: 768px) {
