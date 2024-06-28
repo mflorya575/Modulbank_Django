@@ -1,6 +1,19 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Blog, Category, Vacancy, BannerIndex, BannerOpen, BannerCredit, BannerBank, BannerPartner
+
+
+def set_city(request, city_id):
+    city = get_object_or_404(Category, id=city_id)
+    request.session['city_id'] = city.id
+    return redirect('main:vacancies_list')
+
+
+def get_current_city(request):
+    city_id = request.session.get('city_id')
+    if city_id:
+        return get_object_or_404(Category, id=city_id)
+    return None
 
 
 def index(request):
@@ -49,11 +62,16 @@ def city_detail(request, city_slug):
 
 
 def blog(request):
-    blogs = Blog.objects.all()
+    city = get_current_city(request)
+    if city:
+        blogs = Blog.objects.filter(category=city)
+    else:
+        blogs = Blog.objects.all()
 
     context = {
         'title': 'Блог - Модульбанк',
         'blogs': blogs,
+        'city': city,
     }
 
     return render(request, 'bank/blog.html', context)
@@ -95,11 +113,16 @@ def category_detail(request, slug):
 
 
 def vacancies_list(request):
-    vacancies = Vacancy.objects.all()
+    city = get_current_city(request)
+    if city:
+        vacancies = Vacancy.objects.filter(category=city)
+    else:
+        vacancies = Vacancy.objects.all()
 
     context = {
         'title': 'Вакансии - Модульбанк',
         'vacancies': vacancies,
+        'city': city,
     }
 
     return render(request, 'categories/category_vacancies.html', context)
