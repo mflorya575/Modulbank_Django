@@ -103,7 +103,7 @@
                                 <ul>
                                     {% comment %} <li class="hot-deals"><img src="{% static "assets/imgs/theme/icons/icon-hot.svg" %}" alt="hot deals" /><a href="shop-grid-right.html">Deals</a></li> {% endcomment %}
                                     <li>
-                                        <a class="active" href="{% url 'main:index' %}">Главная {% comment %} <i class="fi-rs-angle-down"></i> {% endcomment %}</a>
+                                        <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'main:index' %}">Главная {% comment %} <i class="fi-rs-angle-down"></i> {% endcomment %}</a>
                                         {% comment %} <ul class="sub-menu">
                                             <li><a href="index.html">Home 1</a></li>
                                             <li><a href="index-2.html">Home 2</a></li>
@@ -114,7 +114,7 @@
                                         </ul> {% endcomment %}
                                     </li>
                                     <li>
-                                        <a href="{% url 'main:about' %}">О нас</a>
+                                        <a class="{% if request.path == '/about/' %}active{% endif %}" href="{% url 'main:about' %}">О нас</a>
                                     </li>
                                     {% comment %} <li>
                                         <a href="shop-grid-right.html">Shop <i class="fi-rs-angle-down"></i></a>
@@ -200,17 +200,17 @@
                                         <a href="{% url 'main:contact' %}">Контакты</a>
                                     </li> {% endcomment %}
                                     <li>
-                                        <a href="{% url 'main:vacancies_list' %}">Вакансии</a>
+                                        <a class="{% if request.path == '/vacancies/' %}active{% endif %}" href="{% url 'main:vacancies_list' %}">Вакансии</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'main:bank_garant' %}">Получить <i class="fi-rs-angle-down"></i></a>
+                                        <a class="{% if request.path == '/bank-garant/' %}active{% endif %}" href="{% url 'main:bank_garant' %}">Получить <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a href="{% url 'main:bank_garant' %}">Банковские гарантии</a></li>
-                                            <li><a href="{% url 'main:credit' %}">Кредиты</a></li>
+                                            <li><a class="{% if request.path == '/bank-garant/' %}active{% endif %}" href="{% url 'main:bank_garant' %}">Банковские гарантии</a></li>
+                                            <li><a class="{% if request.path == '/credit/' %}active{% endif %}" href="{% url 'main:credit' %}">Кредиты</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="{% url 'main:partner_program' %}">Стать партнером</a>
+                                        <a class="{% if request.path == '/partner-program/' %}active{% endif %}" href="{% url 'main:partner_program' %}">Стать партнером</a>
                                     </li>
                                     {% comment %} <li>
                                         <a href="{% url 'main:open_score' %}">Открыть счет</a>
