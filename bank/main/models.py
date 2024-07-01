@@ -182,9 +182,10 @@ class Vacancy(models.Model):
 
 
 class BannerIndex(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    title = models.CharField(max_length=255, blank=True, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
     image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    url = models.URLField(max_length=255, blank=True, null=True, verbose_name="Ссылка")
     published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     is_active = models.BooleanField(default=True, verbose_name="Активен")
 
@@ -194,13 +195,14 @@ class BannerIndex(models.Model):
         ordering = ['-published_at']
 
     def __str__(self):
-        return self.title
+        return self.title if self.title else "Без заголовка"
 
 
 class BannerOpen(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    title = models.CharField(max_length=255, blank=True, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
     image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    url = models.URLField(max_length=255, blank=True, null=True, verbose_name="Ссылка")
     published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     is_active = models.BooleanField(default=True, verbose_name="Активен")
 
@@ -210,13 +212,14 @@ class BannerOpen(models.Model):
         ordering = ['-published_at']
 
     def __str__(self):
-        return self.title
+        return self.title if self.title else "Без заголовка"
 
 
 class BannerCredit(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    title = models.CharField(max_length=255, blank=True, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
     image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    url = models.URLField(max_length=255, blank=True, null=True, verbose_name="Ссылка")
     published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     is_active = models.BooleanField(default=True, verbose_name="Активен")
 
@@ -226,13 +229,14 @@ class BannerCredit(models.Model):
         ordering = ['-published_at']
 
     def __str__(self):
-        return self.title
+        return self.title if self.title else "Без заголовка"
 
 
 class BannerBank(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    title = models.CharField(max_length=255, blank=True, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
     image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    url = models.URLField(max_length=255, blank=True, null=True, verbose_name="Ссылка")
     published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     is_active = models.BooleanField(default=True, verbose_name="Активен")
 
@@ -242,13 +246,14 @@ class BannerBank(models.Model):
         ordering = ['-published_at']
 
     def __str__(self):
-        return self.title
+        return self.title if self.title else "Без заголовка"
 
 
 class BannerPartner(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
+    title = models.CharField(max_length=255, blank=True, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="Слаг")
     image = models.ImageField(upload_to='banners/', verbose_name="Изображение")
+    url = models.URLField(max_length=255, blank=True, null=True, verbose_name="Ссылка")
     published_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     is_active = models.BooleanField(default=True, verbose_name="Активен")
 
@@ -258,5 +263,5 @@ class BannerPartner(models.Model):
         ordering = ['-published_at']
 
     def __str__(self):
-        return self.title
+        return self.title if self.title else "Без заголовка"
 
