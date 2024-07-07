@@ -299,6 +299,7 @@
                     </div>
                 </div>
 
+                {% if not hide_city_selection %}
                 <div class="main-categori-wrap d-none d-lg-block custom-city">
                     <a class="categories-button-active" href="#" id="custom-btn">
                         {% if city %}
@@ -350,6 +351,7 @@
                         {% comment %} <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show more...</span></div> {% endcomment %}
                     </div>
                 </div>
+                {% endif %}
 
             </div>
         </div>

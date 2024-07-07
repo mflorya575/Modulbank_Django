@@ -63,6 +63,7 @@ def city_detail(request, city_slug):
     context = {
         'title': f'Открыть счет - {city.title}',
         'city': city,
+        'hide_city_selection': True,  # Флаг для скрытия выбора города
     }
 
     return render(request, 'categories/city_detail.html', context)
