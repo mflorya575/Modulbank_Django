@@ -28,7 +28,7 @@ def index(request):
     banners = BannerIndex.objects.all()
 
     context = {
-        'title': 'Главная - Модульбанк',
+        'title': 'Главная - Модульбанк в регионах',
         'vacancies': vacancies,
         'blogs': blogs,
         'banners': banners,
@@ -41,7 +41,7 @@ def index(request):
 def about(request):
 
     context = {
-        'title': 'О нас - Модульбанк',
+        'title': 'О нас - Модульбанк в регионах',
     }
 
     return render(request, 'bank/about.html', context)
@@ -50,7 +50,7 @@ def about(request):
 def contact(request):
 
     context = {
-        'title': 'Контакты - Модульбанк',
+        'title': 'Контакты - Модульбанк в регионах',
     }
 
     return render(request, 'bank/contact.html', context)
@@ -76,7 +76,7 @@ def blog(request):
         blogs = Blog.objects.all()
 
     context = {
-        'title': 'Блог - Модульбанк',
+        'title': 'Блог - Модульбанк в регионах',
         'blogs': blogs,
         'city': city,
     }
@@ -111,7 +111,7 @@ def category_detail(request, slug):
     vacancies = Vacancy.objects.filter(category=category)
 
     context = {
-        'title': category.title,
+        'title': category.title - 'Модульбанк в регионах',
         'vacancies': vacancies,
         'category': category,
     }
@@ -127,7 +127,7 @@ def vacancies_list(request):
         vacancies = Vacancy.objects.all()
 
     context = {
-        'title': 'Вакансии - Модульбанк',
+        'title': 'Вакансии - Модульбанк в регионах',
         'vacancies': vacancies,
         'city': city,
     }
@@ -139,7 +139,7 @@ def vacancy_detail(request, slug):
     vacancy = get_object_or_404(Vacancy, slug=slug)
 
     context = {
-        'title': vacancy.title,
+        'title': vacancy.title - 'Модульбанк в регионах',
         'vacancy': vacancy,
     }
 
@@ -150,7 +150,7 @@ def partner_program(request):
     banners = BannerPartner.objects.all()
 
     context = {
-        'title': 'Партнерская программа - Модульбанк',
+        'title': 'Партнерская программа - Модульбанк в регионах',
         'banners': banners,
     }
 
@@ -161,7 +161,7 @@ def open_score(request):
     bannersopen = BannerOpen.objects.all()
 
     context = {
-        'title': 'Открыть счет - Модульбанк',
+        'title': 'Открыть счет - Модульбанк в регионах',
         'bannersopen': bannersopen,
     }
 
@@ -172,7 +172,7 @@ def bank_garant(request):
     banners = BannerBank.objects.all()
 
     context = {
-        'title': 'Банковские гарантии - Модульбанк',
+        'title': 'Банковские гарантии - Модульбанк в регионах',
         'banners': banners,
     }
 
@@ -183,7 +183,7 @@ def credit(request):
     banners = BannerCredit.objects.all()
 
     context = {
-        'title': 'Кредиты - Модульбанк',
+        'title': 'Кредиты - Модульбанк в регионах',
         'banners': banners,
     }
 
