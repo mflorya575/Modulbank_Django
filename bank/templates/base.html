@@ -58,9 +58,9 @@
                     <a href="{% url 'main:index' %}"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                 </div> {% endcomment %}
                 <div class="header-wrap header-space-between position-relative">
-                    <div class="logo logo-width-1 d-block d-lg-none">
+                    {% comment %} <div class="logo logo-width-1 d-block d-lg-none">
                         <a href="index.html"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
-                    </div>
+                    </div> {% endcomment %}
                     <div class="logo logo-width-1">
                         <a href="{% url 'main:index' %}"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                     </div>
@@ -78,7 +78,7 @@
                                     <ul>
                                         {% for c in categories %}
                                             <li>
-                                                <a href="{% url 'main:city_detail' c.slug %}">{{ c.title }}</a>
+                                                <a href="https://modulbank.ru/rko/?utm_source=agentnet&utm_medium=partner&utm_campaign=RKO_ag-9718255788">{{ c.title }}</a>
                                             </li>
                                         {% endfor %}
                                         
@@ -224,7 +224,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a class="{% if request.path == '/partner-program/' %}active{% endif %}" href="{% url 'main:partner_program' %}">Стать партнером</a>
+                                        <a class="{% if request.path == '/partner-program/' %}active{% endif %}" href="https://partner.modulbank.ru/account/register?clid=03AF8036-7E73-4B17-88C8-3F51AAACDF45">Стать партнером</a>
                                     </li>
                                     {% comment %} <li>
                                         <a href="{% url 'main:open_score' %}">Открыть счет</a>
@@ -237,7 +237,7 @@
                         <img src="{% static "assets/imgs/theme/icons/icon-headphone.svg" %}" alt="hotline" />
                         <p>+7 4862 900 755<span>Центр поддержки</span></p>
                     </div>
-                    <div class="header-action-icon-2 d-block d-lg-none">
+                    <div class="header-action-icon-2 d-block d-lg-none"> {% comment %} d-block {% endcomment %}
                         <div class="burger-icon burger-icon-white">
                             <span class="burger-icon-top"></span>
                             <span class="burger-icon-mid"></span>
@@ -399,7 +399,7 @@
                                 <a href="{% url 'main:partner_program' %}">Партнерская программа</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="{% url 'main:open_score' %}">Открыть счет</a>
+                                <a href="https://modulbank.ru/rko/?utm_source=agentnet&utm_medium=partner&utm_campaign=RKO_ag-9718255788">Открыть счет</a>
                             </li>
                         </ul>
                     </nav>
@@ -530,7 +530,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0">
-                            <div class="logo mb-30">
+                            <div class="logo">
                                 <a href="{% url 'main:index' %}" class="mb-15"><img src="{% static "assets/imgs/theme/logo.svg" %}" alt="logo" /></a>
                                 {% comment %} <p class="font-lg text-heading">Awesome grocery store website template</p> {% endcomment %}
                             </div>
@@ -568,7 +568,7 @@
                             {% comment %} <li><a href="#">Help Ticket</a></li> {% endcomment %}
                             {% comment %} <li><a href="#">Shipping Details</a></li> {% endcomment %}
                             <li><a href="{% url 'main:partner_program' %}">Партнерская программа</a></li>
-                            <li><a href="{% url 'main:open_score' %}">Открыть счет</a></li>
+                            <li><a href="https://modulbank.ru/rko/?utm_source=agentnet&utm_medium=partner&utm_campaign=RKO_ag-9718255788">Открыть счет</a></li>
                             <li><a href="{% url 'main:bank_garant' %}">Банковские гарантии</a></li>
                             <li><a href="{% url 'main:credit' %}">Кредиты</a></li>
                         </ul>
@@ -616,12 +616,12 @@
                     <div class="footer-bottom"></div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <p class="font-sm mb-0"><strong class="text-brand">ФК Модуль</strong> &copy; 2024. Все права защищены</p>
+                    <p class="font-sm mb-0" id="col-white"><strong class="text-brand">ФК Модуль</strong> &copy; 2024. Все права защищены</p>
                 </div>
                 <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
                     <div class="hotline d-lg-inline-flex mr-30">
                         <img src="{% static "assets/imgs/theme/icons/phone-call.svg" %}" alt="hotline" />
-                        <p>+7 4862 900 755<span>Работаем 10:00 - 19:00</span></p>
+                        <p>+7 4862 900 755<span id="col-white">Работаем 10:00 - 19:00</span></p>
                     </div>
                     {% comment %} <div class="hotline d-lg-inline-flex">
                         <img src="{% static "assets/imgs/theme/icons/phone-call.svg" %}" alt="hotline" />

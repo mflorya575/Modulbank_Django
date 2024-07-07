@@ -93,7 +93,7 @@ footer .hotline {
     background:  #287EFF;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .d-none {
         display: block !important;
     }
@@ -105,4 +105,12 @@ footer .hotline {
     footer .mobile-social-icon {
         justify-content: start;
     }
+} */
+
+.logo a {
+    width: 320px;
+}
+
+#col-white {
+    color: #FFFFFF;
 }
