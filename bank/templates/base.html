@@ -287,7 +287,11 @@
 
                 <div class="main-categori-wrap d-none d-lg-block custom-city">
                     <a class="categories-button-active" href="#" id="custom-btn">
-                        {% comment %} <span class="fi-rs-apps"></span> {% endcomment %} <span class="et" id="custom-btn">Наши</span> города
+                        {% if city %}
+                            <span class="et" id="custom-btn">{{ city.title }}</span>
+                        {% else %}
+                            <span class="et" id="custom-btn">Наши</span> города
+                        {% endif %}
                         <i class="fi-rs-angle-down" style="color: #253D4E !important;"></i>
                     </a>
                     <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
