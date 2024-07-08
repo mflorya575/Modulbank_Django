@@ -140,7 +140,7 @@ def vacancy_detail(request, slug):
     vacancy = get_object_or_404(Vacancy, slug=slug)
 
     context = {
-        'title': vacancy.title - 'Модульбанк в регионах',
+        'title': vacancy.title + ' - Модульбанк в регионах',
         'vacancy': vacancy,
     }
 

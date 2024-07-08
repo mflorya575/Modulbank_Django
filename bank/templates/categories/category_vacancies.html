@@ -39,6 +39,9 @@
         </div>
     </div>
     <div class="container mb-30">
+        <p>Приглашаем присоединиться к нашей команде!
+            Список актуальных вакансий представлен ниже.
+            Для предложений о сотрудничестве: info@fkmodul.ru</p>
         <div class="row">
             <div class="col-12">
                 <div class="shop-product-fillter">
@@ -105,7 +108,7 @@
                                     </div>
                                     <h2><a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">{{ vacancy.title }}</a></h2>
                                     <div>
-                                        <span class="font-small text-muted">В город <a href="{% url 'main:index' %}">{{ vacancy.category }}</a></span>
+                                        <span class="font-small text-muted">В городе  <a href="{% url 'main:index' %}">{{ vacancy.category }}</a></span>
                                     </div>
                                 </div>
                             </div>
