@@ -11,18 +11,20 @@
 
 
                     {% for banner in banners %}
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ banner.image.url }})">
-                        <div class="slider-content">
-                            <h1 class="display-2 mb-40">
-                                {{ banner.title }}
-                            </h1>
-                            {% comment %} <p class="mb-65">Получите более 38 000 ₽ за рекомендацию Модульбанка</p> {% endcomment %}
-                            {% comment %} <form class="form-subcriber d-flex">
-                                <input type="email" placeholder="Your emaill address" />
-                                <button class="btn" type="submit">Subscribe</button>
-                            </form> {% endcomment %}
+                    <a href="{{ banner.url }}">
+                        <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ banner.image.url }})">
+                            <div class="slider-content">
+                                <h1 class="display-2 mb-40">
+                                    {{ banner.title }}
+                                </h1>
+                                {% comment %} <p class="mb-65">Получите более 38 000 ₽ за рекомендацию Модульбанка</p> {% endcomment %}
+                                {% comment %} <form class="form-subcriber d-flex">
+                                    <input type="email" placeholder="Your emaill address" />
+                                    <button class="btn" type="submit">Subscribe</button>
+                                </form> {% endcomment %}
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     {% endfor %}
 
 

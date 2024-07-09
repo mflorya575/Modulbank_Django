@@ -11,14 +11,16 @@
 
 
                     {% for banner in banners %}
-                    <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ banner.image.url }})">
-                        <div class="slider-content">
-                            <h1 class="display-2 mb-40">
-                                {{ banner.title }}
-                            </h1>
-                            {% comment %} <p class="mb-65">Делать бизнес проще — наше дело</p> {% endcomment %}
+                    <a href="{{ banner.url }}">
+                        <div class="single-hero-slider single-animation-wrap" style="background-image: url({{ banner.image.url }})">
+                            <div class="slider-content">
+                                <h1 class="display-2 mb-40">
+                                    {{ banner.title }}
+                                </h1>
+                                {% comment %} <p class="mb-65">Делать бизнес проще — наше дело</p> {% endcomment %}
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     {% endfor %}
 
 
