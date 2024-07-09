@@ -120,3 +120,7 @@ footer .hotline {
     border-radius: 10px;
     padding: -10px 5px;
 }
+
+.centering {
+    align-items: center;
+}
