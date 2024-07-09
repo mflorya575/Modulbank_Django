@@ -114,3 +114,9 @@ footer .hotline {
 #col-white {
     color: #FFFFFF;
 }
+
+#btn-header {
+    background: #072DA0;
+    border-radius: 10px;
+    padding: -10px 5px;
+}
