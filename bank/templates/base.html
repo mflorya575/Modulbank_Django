@@ -415,7 +415,7 @@
 
     <footer class="main">
         <section class="newsletter mb-15">
-            <div class="container">
+            {% comment %} <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="position-relative newsletter-inner">
@@ -423,7 +423,6 @@
                                 <h2 class="mb-20">
                                     Подписаться на новости и акции
                                 </h2>
-                                {% comment %} <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">Nest Mart</span></p> {% endcomment %}
                                 <form class="form-subcriber d-flex">
                                     <input type="email" placeholder="Ваш email" />
                                     <button class="btn" type="submit" id="blue_back">Отправить</button>
@@ -433,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
         </section>
         {% comment %} <section class="featured section-padding">
             <div class="container">
@@ -585,8 +584,33 @@
                     </div> {% endcomment %}
                 </div>
             </div>
+
+            <div class="container pb-30 custom-back">
+                <div class="row align-items-center">
+                    <div class="col-12 mb-30">
+                        <div class="footer-bottom"></div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <p class="font-sm mb-0" id="col-white"><strong class="text-brand">ФК Модуль</strong> &copy; 2024. Все права защищены</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
+                        <div class="hotline d-lg-inline-flex mr-30">
+                            <img src="{% static "assets/imgs/theme/icons/phone-call.svg" %}" alt="hotline" />
+                            <p>+7 4862 900 755<span id="col-white">Работаем 10:00 - 19:00</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
+                        <div class="mobile-social-icon">
+                            <h6>Подписывайтесь</h6>
+                            <a href="https://vk.com/fkmodul"><img src="{% static "assets/imgs/theme/icons/vk.svg" %}" alt="вконтакте" /></a>
+                            <a href="https://t.me/fkmodul"><img src="{% static "assets/imgs/theme/icons/tg.svg" %}" alt="телеграм" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
-        <div class="container pb-30 custom-back">
+        {% comment %} <div class="container pb-30 custom-back">
             <div class="row align-items-center">
                 <div class="col-12 mb-30">
                     <div class="footer-bottom"></div>
@@ -599,23 +623,16 @@
                         <img src="{% static "assets/imgs/theme/icons/phone-call.svg" %}" alt="hotline" />
                         <p>+7 4862 900 755<span id="col-white">Работаем 10:00 - 19:00</span></p>
                     </div>
-                    {% comment %} <div class="hotline d-lg-inline-flex">
-                        <img src="{% static "assets/imgs/theme/icons/phone-call.svg" %}" alt="hotline" />
-                        <p>+7 4862 900 755<span>24/7 Центр поддержки</span></p>
-                    </div> {% endcomment %}
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
                     <div class="mobile-social-icon">
                         <h6>Подписывайтесь</h6>
-                        {% comment %} <a href="#"><img src="{% static "assets/imgs/theme/icons/icon-facebook-white.svg" %}" alt="" /></a> {% endcomment %}
-                        {% comment %} <a href="#"><img src="{% static "assets/imgs/theme/icons/icon-twitter-white.svg" %}" alt="" /></a> {% endcomment %}
-                        {% comment %} <a href="#"><img src="{% static "assets/imgs/theme/icons/icon-instagram-white.svg" %}" alt="" /></a> {% endcomment %}
                         <a href="https://vk.com/fkmodul"><img src="{% static "assets/imgs/theme/icons/vk.svg" %}" alt="вконтакте" /></a>
                         <a href="https://t.me/fkmodul"><img src="{% static "assets/imgs/theme/icons/tg.svg" %}" alt="телеграм" /></a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
     </footer>
     <!-- Preloader Start -->
     <div id="preloader-active">
