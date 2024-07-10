@@ -120,7 +120,7 @@
 
                         {% for blog in blogs %}
                             <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s" style="height: 345px;">
+                                <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s" style="height: 345px; width: 260px;">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="{% url 'main:blog_detail' slug=blog.slug %}">
@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="#">Событие</a>
+                                            <a href="{% url 'main:blog_detail' slug=blog.slug %}">Событие</a>
                                         </div>
                                         <h2><a href="{% url 'main:blog_detail' slug=blog.slug %}">{{ blog.title }}</a></h2>
                                     </div>
@@ -2851,14 +2851,14 @@
                                         <div class="product-img-action-wrap">
                                             <div class="product-img product-img-zoom">
                                                 <a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">
-                                                    <img class="default-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 246px;"/>
-                                                    <img class="hover-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 246px;"/>
+                                                    <img class="default-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 220px;"/>
+                                                    <img class="hover-img" src="{{ vacancy.thumbnail.url }}" alt="{{ vacancy.title }}" style="width: 246px; height: 220px;"/>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="product-content-wrap">
                                             <div class="product-category">
-                                                <a href="shop-grid-right.html">Вакансия</a>
+                                                <a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">Вакансия</a>
                                             </div>
                                             <h2><a href="{% url 'main:vacancy_detail' slug=vacancy.slug %}">{{ vacancy.title }}</a></h2>
                                             <div class="sold mt-15 mb-15">

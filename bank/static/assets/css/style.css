@@ -124,3 +124,23 @@ footer .hotline {
 .centering {
     align-items: center;
 }
+
+.img-detail {
+    width: 55% !important;
+    height: 538px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+@media (max-width: 1199px) {
+    .img-detail {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .img-detail {
+        width: 100% !important;
+    }
+}

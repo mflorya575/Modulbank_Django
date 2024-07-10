@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 col-lg-12 m-auto">
-                    <section class="row align-items-center mb-50">
+                    <section class="row align-items-center mb-50" style="margin-bottom: 150px !important;">
                         <div class="col-lg-6">
                             <img src="{% static "assets/imgs/page/about1.png" %}" alt="" class="border-radius-15 mb-md-3 mb-lg-0 mb-sm-4" />
                         </div>
@@ -78,15 +78,18 @@
                         </div>
                     </section> {% endcomment %}
 
-                    <section class="row align-items-center mb-50">
+                    <section class="row align-items-center mb-50" style="margin-bottom: 130px !important;">
                         <div class="row mb-50 align-items-center">
-                            <div class="col-lg-7 pr-30">
+                            {% comment %} <div class="col-lg-7 pr-30">
                                 <img src="{% static "assets/imgs/page/about2.png" %}" alt="" class="mb-md-3 mb-lg-0 mb-sm-4" style="border-radius: 15px;" />
-                            </div>
+                            </div> {% endcomment %}
                             <div class="col-lg-5">
                                 <h1 class="heading-1 mb-40">Ваш партнер по бизнесу</h1>
                                 <p class="mb-30">Независимо от того, являетесь ли вы начинающим предпринимателем или опытным владельцем бизнеса, Модульбанк предоставит инструменты и поддержку, необходимые для успешного ведения коммерческой деятельности и её полноценного развития.</p>
                                 <p>Удобство использования интернет-банка и мобильного приложения позволит управлять финансами в любое время и в любом месте. Наши специалисты помогут вам оптимизировать налоги, получить банковские гарантии или кредит и подберут лучшие финансовые решения для вашего бизнеса.</p>
+                            </div>
+                            <div class="col-lg-7 pr-30">
+                                <img src="{% static "assets/imgs/page/about2.png" %}" alt="" class="mb-md-3 mb-lg-0 mb-sm-4" style="border-radius: 15px;" />
                             </div>
                         </div>
                         <div class="row">
@@ -107,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <section class="container mb-50 d-none d-md-block">
+        {% comment %} <section class="container mb-50 d-none d-md-block">
             <div class="row about-count">
                 <div class="col-lg-1-5 col-md-6 text-center mb-lg-0 mb-md-5">
                     <h1 class="heading-1"><span class="count">15</span>+</h1>
@@ -130,7 +133,7 @@
                     <h4>Акции</h4>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 col-lg-12 m-auto">
@@ -138,7 +141,7 @@
                         <h2 class="title style-3 mb-40 text-center">Наша команда</h2>
                         <div class="row centering">
                             <div class="col-lg-4 mb-lg-0 mb-md-5 mb-sm-5">
-                                <h6 class="mb-5 text-brand">Наши сотрудники</h6>
+                                {% comment %} <h6 class="mb-5 text-brand">Наши сотрудники</h6> {% endcomment %}
                                 <h1 class="mb-30">Наши сотрудники</h1>
                                 <p class="mb-30">Для предоставления качественных финансовых услуг мы привлекаем высококвалифицированных экспертов. Специалисты Модульбанка – профессионалы в области финансов, налогообложения и ведения бизнеса, благодаря чему эффективно решают задачи роста наших клиентов.</p>
                                 <p class="mb-30">Благодаря постоянному обучению и повышению квалификации, наши сотрудники всегда в курсе последних изменений в законодательстве и новых тенденций в финансовом секторе.</p>
